@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Patas em Boas Mãos – Pet sitting ao domicílio</title>
+<meta name="description" content="Pet sitting e cuidados a cães e gatos em casa do dono. Benavente, Santarém. Serviço em Portugal Continental.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f0e4;--surf:#fffaf0;--ink:#3b2e22;--mute:#6f5f4f;--green:#5f7d5a;--green-d:#46613f;--brown:#8a5a3b;--line:#e4d9c3;--wa:#1f8f4e;--onwa:#fff;--shadow:0 6px 22px rgba(80,55,30,.1);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{height:100%;scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+,::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 Nunito,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surf);z-index:30}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.2;margin:0 0 .5em}
+h1{font-size:clamp(2.1rem,6vw,3.6rem)}h2{font-size:clamp(1.7rem,4vw,2.4rem)}h3{font-size:1.2rem}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:68px 0}
+.alt{background:var(--surf)}
+.lead{color:var(--mute);font-size:1.1rem}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surf);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.logo{font:700 1.2rem Fraunces,Georgia,serif;text-decoration:none;color:var(--green-d)}
+nav{display:flex;gap:4px;align-items:center}
+nav a{text-decoration:none;padding:8px 10px;border-radius:10px;font-weight:600;font-size:.95rem}
+nav a:hover{background:var(--bg)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;color:var(--ink);font:inherit;font-weight:700;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:999px;font:700 1rem Nunito,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;min-height:48px}
+.btn-wa{background:var(--wa);color:var(--onwa)}
+.btn-wa:hover{filter:brightness(1.08)}
+.btn-o{border-color:var(--green);color:var(--green-d);background:transparent}
+.btn-o:hover{background:var(--green);color:#fff}
+.btn-sm{padding:8px 16px;min-height:40px;font-size:.95rem}
+:focus-visible{outline:3px solid var(--brown);outline-offset:2px}
+.hero{padding:48px 0 64px;background:linear-gradient(180deg,var(--surf),var(--bg))}
+.hero .grid{display:block;max-width:720px}
+.hero h1{color:var(--green-d)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.photo{margin:0;border-radius:24px;overflow:hidden;background:repeating-linear-gradient(45deg,var(--line),var(--line) 12px,var(--surf) 12px,var(--surf) 24px);aspect-ratio:4/3;position:relative;box-shadow:var(--shadow)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:16px;color:var(--mute);font-weight:700}
+.photo .ph span{font-size:2.6rem}
+.photo small{font-weight:400;font-size:.85rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.alt .card{background:var(--bg)}
+.card .ic{font-size:1.9rem;display:block;margin-bottom:6px}
+.price-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.price-row:last-child{border:0}
+.price-row b{color:var(--green-d);white-space:nowrap}
+.note{background:var(--surf);border-left:5px solid var(--brown);border-radius:14px;padding:18px 22px;margin:20px 0;box-shadow:var(--shadow)}
+.alt .note{background:var(--bg)}
+.travel{border-left-color:var(--green)}
+.travel h3{font-size:1.35rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px;max-width:720px}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.steps li::before{content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:700}
+ul.tick{list-style:none;padding:0;margin:0 0 1em}
+ul.tick li{padding:5px 0 5px 30px;position:relative}
+ul.tick li::before{content:"🐾";position:absolute;left:0;top:5px;font-size:.95rem}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+label{display:block;font-weight:700;margin:0 0 4px}
+select,input[type=number],input[type=text]{width:100%;padding:12px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;min-height:48px}
+.fld{margin-bottom:14px}
+.chk{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-weight:600}
+.chk input{width:22px;height:22px;margin-top:3px;accent-color:var(--green)}
+.res{position:sticky;top:90px}
+.res .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);gap:10px}
+.res .tot{font:700 1.5rem Fraunces,Georgia,serif;color:var(--green-d);border:0;padding-top:12px}
+.quote{background:rgba(138,90,59,.12);border-radius:12px;padding:12px 14px;font-weight:600}
+.small{font-size:.9rem;color:var(--mute)}
+details{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:4px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700;padding:12px 0;list-style-position:outside}
+details p{color:var(--mute)}
+footer{background:var(--green-d);color:#fff;padding:40px 0 calc(90px + env(safe-area-inset-bottom,0px));text-align:center}
+footer .btn{margin-top:8px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:25;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+@media (max-width:820px){
+.hero .grid,.split,.calc{grid-template-columns:1fr}
+.res{position:static}
+.menu-btn{display:block}
+nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surf);flex-direction:column;align-items:stretch;padding:10px 20px 16px;border-bottom:1px solid var(--line)}
+nav.open{display:flex}
+section{padding:48px 0}
+}
+@media (prefers-reduced-motion:no-preference){.hero .grid>{animation:in .7s ease both}.hero .grid>:last-child{animation-delay:.12s}@keyframes in{from{opacity:0;transform:translateY(12px)}}}
+</style>
+</head>
+<body>
+<!-- Informações legais (NIF, livro de reclamações, política de privacidade, etc.): acrescentar no rodapé antes da publicação definitiva. -->
+<header>
+<div class="wrap bar">
+<a class="logo" href="#inicio">🐾 Patas em Boas Mãos</a>
+<button class="menu-btn" id="mb" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Principal">
+<a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#precos">Preços</a><a href="#calculadora">Calculadora</a><a href="#como">Como funciona</a><a href="#seguranca">Segurança</a><a href="#faq">Perguntas</a>
+<a class="btn btn-wa btn-sm" data-wa="Olá! Gostaria de pedir informações sobre os vossos serviços." href="#">Pedir informações</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+<div class="wrap grid">
+<div>
+<h1>Tu vais descansado. Eles ficam em boas patas.</h1>
+<p class="lead">Cuidamos dos teus cães e gatos em tua casa, com atenção, carinho e responsabilidade. Serviço a partir de Benavente, em Portugal Continental.</p>
+<div class="cta">
+<a class="btn btn-wa" data-wa="Olá! Gostaria de pedir um orçamento." href="#">Pedir orçamento</a>
+<a class="btn btn-o" data-wa="Olá! Gostaria de falar convosco sobre os vossos serviços." href="#">Falar pelo WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="alt" id="sobre">
+<div class="wrap">
+<div>
+<h2>Sobre nós</h2>
+<p>Somos a Carolina e o Dinis. O Dinis tem 20 anos de experiência a cuidar de animais de diferentes espécies, e ambos gostamos de garantir que cada animal recebe atenção, carinho e os cuidados adequados.</p>
+<p>Vamos a tua casa, para que os teus animais fiquem no sítio que conhecem, com as rotinas de sempre. Não precisas de os levar para a nossa casa.</p>
+</div>
+</div>
+</section>
+
+<section id="servicos">
+<div class="wrap">
+<h2>Os nossos serviços</h2>
+<p class="lead">Todos os cuidados são prestados na casa do dono. Cada visita tem uma duração aproximada de 30 minutos, e é possível marcar várias visitas por dia, conforme a disponibilidade.</p>
+<div class="cards">
+<div class="card"><span class="ic">🏠</span><h3>Pet sitting ao domicílio</h3><p>Cuidamos dos teus animais em tua casa.</p></div>
+<div class="card"><span class="ic">🥣</span><h3>Alimentação e água fresca</h3><p>Refeições e reposição de água fresca.</p></div>
+<div class="card"><span class="ic">🦮</span><h3>Passeios com cães</h3><p>Passeios adequados a cada cão.</p></div>
+<div class="card"><span class="ic">🧶</span><h3>Companhia e brincadeiras</h3><p>Atenção individualizada para cada animal.</p></div>
+<div class="card"><span class="ic">🧹</span><h3>Limpeza básica</h3><p>Da zona utilizada pelo animal.</p></div>
+<div class="card"><span class="ic">✈️</span><h3>Férias e ausências</h3><p>Cuidados durante férias, viagens ou ausências prolongadas.</p></div>
+<div class="card"><span class="ic">🐶</span><h3>Cachorros</h3><p>Cuidados dedicados a cachorros.</p></div>
+<div class="card"><span class="ic">🐱</span><h3>Gatos</h3><p>Visitas para gatos em tua casa.</p></div>
+<div class="card"><span class="ic">💊</span><h3>Medicação</h3><p>Quando previamente acordada e dentro das nossas competências.</p></div>
+<div class="card"><span class="ic">🚗</span><h3>Transporte de animais</h3><p>Ao veterinário ou a outros destinos, mediante orçamento.</p></div>
+</div>
+<div class="note"><b>Alimentação:</b> a alimentação habitual é fornecida pelo dono. Se preferires que seja a nossa equipa a fornecer a comida, o valor adicional é combinado previamente.</div>
+</div>
+</section>
+
+<section class="alt" id="precos">
+<div class="wrap">
+<h2>Preços</h2>
+<p class="lead">Estes são os preços dos serviços, por visita. A deslocação é cobrada à parte.</p>
+<div class="cards">
+<div class="card"><h3>🐕 Cuidados com cães</h3>
+<div class="price-row"><span>Cão de porte pequeno</span><b>12 €</b></div>
+<div class="price-row"><span>Cão de porte médio</span><b>15 €</b></div>
+<div class="price-row"><span>Cão de porte grande</span><b>18 €</b></div>
+<div class="price-row"><span>Dois cães</span><b>20 €</b></div>
+<div class="price-row"><span>Três cães</span><b>28 €</b></div></div>
+<div class="card"><h3>🐈 Cuidados com gatos</h3>
+<div class="price-row"><span>Visita para gatos</span><b>12 €</b></div></div>
+<div class="card"><h3>➕ Suplementos</h3>
+<div class="price-row"><span>Fins de semana, feriados e épocas festivas</span><b>+50%</b></div>
+<div class="price-row"><span>Serviços a partir das 20h00</span><b>+5 €</b></div>
+<div class="price-row"><span>Administração de medicação (previamente acordada)</span><b>+5 €</b></div>
+<p class="small" style="margin-top:10px">Os suplementos só se aplicam quando a situação corresponde, e ficam sempre claros no orçamento. Para outras combinações de animais, pede-nos um orçamento.</p></div>
+</div>
+
+<div class="note travel" id="deslocacao">
+<h3>🚗 Taxa de deslocação</h3>
+<p>Cobramos 1 € por quilómetro desde Benavente até à tua casa.</p>
+<p style="margin:0">Por exemplo, se a tua casa ficar a 20 km de Benavente, pagas 20 € de deslocação.</p>
+</div>
+</div>
+</section>
+
+<section id="calculadora">
+<div class="wrap">
+<h2>Calculadora de preços</h2>
+<p class="lead">Faz uma estimativa. Não é uma reserva confirmada: a marcação é combinada por WhatsApp.</p>
+<div class="calc">
+<div class="card">
+<div class="fld"><label for="animal">Tipo de animal</label><select id="animal"><option value="cao">Cão</option><option value="gato">Gato</option></select></div>
+<div class="fld" id="porteBox"><label for="porte">Porte do cão</label><select id="porte"><option value="12">Pequeno</option><option value="15">Médio</option><option value="18">Grande</option></select></div>
+<div class="fld"><label for="n">Número de animais</label><input type="number" id="n" min="1" max="20" value="1" inputmode="numeric"></div>
+<div class="fld"><label for="v">Número de visitas</label><input type="number" id="v" min="1" max="200" value="1" inputmode="numeric"></div>
+<div class="fld"><label for="km">Distância de Benavente à tua casa (km)</label><input type="number" id="km" min="0" max="1000" value="0" inputmode="decimal"></div>
+<label class="chk"><input type="checkbox" id="fds"> Fim de semana, feriado ou época festiva</label>
+<label class="chk"><input type="checkbox" id="noite"> Serviço a partir das 20h00</label>
+<label class="chk"><input type="checkbox" id="med"> Precisa de administração de medicação</label>
+</div>
+<div class="card res" aria-live="polite">
+<h3>Estimativa</h3>
+<div id="out"></div>
+<p class="small" style="margin-top:12px">Valores estimados. Confirmamos tudo contigo antes de iniciar o serviço.</p>
+<a class="btn btn-wa" id="calcWa" href="#">Enviar estimativa por WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="alt" id="como">
+<div class="wrap">
+<h2>Como funciona</h2>
+<ol class="steps">
+<li>Entras em contacto connosco através do WhatsApp.</li>
+<li>Explicas-nos quais são os animais, onde vives e que cuidados necessitam.</li>
+<li>Combinamos os detalhes, os horários, a disponibilidade e o preço.</li>
+<li>Podemos realizar uma visita inicial, se quiseres.</li>
+<li>Prestamos os cuidados em tua casa.</li>
+<li>Mantemos o contacto contigo durante o serviço, conforme combinado.</li>
+</ol>
+<p style="margin-top:18px">Também aceitamos pedidos de última hora, sujeitos à disponibilidade. Se for necessário, combinamos contigo a entrega e a guarda temporária das chaves de casa.</p>
+<div class="cards">
+<div class="card"><h3>Cancelamentos</h3><p style="margin:0">Cancelamento gratuito até 24 horas antes do início do serviço.</p></div>
+<div class="card"><h3>Métodos de pagamento</h3><ul class="tick" style="margin:0"><li>MB WAY</li><li>Transferência bancária</li><li>Dinheiro</li></ul></div>
+</div>
+</div>
+</section>
+
+<section id="seguranca">
+<div class="wrap split">
+<div>
+<h2>Segurança e bem-estar</h2>
+<ul class="tick">
+<li>Atenção individualizada a cada animal.</li>
+<li>Respeito pelas rotinas de cada animal.</li>
+<li>Cumprimento das instruções dadas pelos donos.</li>
+<li>Água fresca e alimentação conforme as indicações recebidas.</li>
+<li>Companhia, brincadeiras e passeios adequados.</li>
+<li>Comunicação contigo durante o serviço, conforme combinado.</li>
+<li>Contacto contigo e encaminhamento para assistência veterinária quando necessário.</li>
+</ul>
+</div>
+<div class="card">
+<h3>🚗 Transporte de animais</h3>
+<p>Temos carro, transportadora e equipamentos de transporte para animais.</p>
+<p style="margin:0">Podemos levar o teu animal ao veterinário ou a outros destinos. O transporte é combinado mediante orçamento: pede-nos o teu pelo WhatsApp.</p>
+</div>
+</div>
+</section>
+
+<section class="alt" id="faq">
+<div class="wrap">
+<h2>Perguntas frequentes</h2>
+<details><summary>Onde são prestados os serviços?</summary><p>Em Portugal Continental, mediante disponibilidade e possibilidade de deslocação. O nosso ponto de partida é Benavente, distrito de Santarém.</p></details>
+<details><summary>Os animais ficam na vossa casa?</summary><p>Não. Cuidamos dos animais em tua casa, para que não tenhas de os levar.</p></details>
+<details><summary>Quanto tempo dura cada visita?</summary><p>Cada visita tem uma duração aproximada de 30 minutos.</p></details>
+<details><summary>Quem fornece a alimentação?</summary><p>A alimentação habitual é fornecida pelo dono. Se quiseres que a forneçamos nós, o valor adicional é combinado previamente.</p></details>
+<details><summary>Posso pedir várias visitas por dia?</summary><p>Sim, conforme a disponibilidade.</p></details>
+<details><summary>Fazem serviços aos fins de semana e feriados?</summary><p>Sim. Aos fins de semana, feriados e em épocas festivas aplica-se um acréscimo de 50%.</p></details>
+<details><summary>Aceitam pedidos de última hora?</summary><p>Sim, sujeitos à disponibilidade.</p></details>
+<details><summary>Como funciona a deslocação?</summary><p>Cobramos 1 € por quilómetro desde Benavente até à tua casa. Por exemplo, a 20 km pagas 20 € de deslocação.</p></details>
+<details><summary>Posso pedir transporte até ao veterinário?</summary><p>Sim. O transporte para o veterinário ou outros destinos é combinado mediante orçamento.</p></details>
+<details><summary>Como posso reservar?</summary><p>Fala connosco pelo WhatsApp (916 820 712), indica os animais, onde vives e os cuidados necessários, e combinamos os detalhes.</p></details>
+</div>
+</section>
+
+<section id="contactos">
+<div class="wrap split">
+<div>
+<h2>Contactos e reservas</h2>
+<p>Fala connosco pelo WhatsApp: <b>916 820 712</b>. Podes preencher os campos ao lado para enviarmos já a tua mensagem organizada.</p>
+<p class="small">Benavente, distrito de Santarém · Serviço em Portugal Continental.</p>
+<a class="btn btn-wa" data-wa="Olá! Gostaria de pedir informações sobre os vossos serviços." href="#">Falar pelo WhatsApp</a>
+</div>
+<div class="card">
+<div class="fld"><label for="cn">O teu nome</label><input type="text" id="cn" autocomplete="name"></div>
+<div class="fld"><label for="ca">Animais (espécie, porte, quantidade)</label><input type="text" id="ca" placeholder="Ex.: 1 cão de porte médio"></div>
+<div class="fld"><label for="cl">Localidade</label><input type="text" id="cl" autocomplete="address-level2"></div>
+<div class="fld"><label for="cd">Datas e horários pretendidos</label><input type="text" id="cd"></div>
+<button class="btn btn-wa" id="send" type="button">Enviar pedido por WhatsApp</button>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div style="font:700 1.5rem Fraunces,Georgia,serif">🐾 Patas em Boas Mãos</div>
+<p style="margin:6px auto">Tu vais descansado. Eles ficam em boas patas.</p>
+<p style="margin:0 auto 10px">WhatsApp: 916 820 712</p>
+<a class="btn btn-wa" data-wa="Olá! Gostaria de falar convosco." href="#">Falar pelo WhatsApp</a>
+</div>
+</footer>
+<a class="btn btn-wa fab" data-wa="Olá! Gostaria de pedir informações." href="#" aria-label="Falar pelo WhatsApp">💬 WhatsApp</a>
+
+<script>
+var NUM="351916820712";
+function wa(t){return "https://wa.me/"+NUM+"?text="+encodeURIComponent(t)}
+document.querySelectorAll("[data-wa]").forEach(function(a){a.href=wa(a.dataset.wa);a.target="_blank";a.rel="noopener"});
+var mb=document.getElementById("mb"),nav=document.getElementById("nav");
+mb.onclick=function(){var o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",o)};
+nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");mb.setAttribute("aria-expanded","false")})});
+
+var $=function(id){return document.getElementById(id)};
+var eur=function(x){return x.toLocaleString("pt-PT",{minimumFractionDigits:(x%1?2:0),maximumFractionDigits:2})+" €"};
+function calc(){
+ var animal=$("animal").value,n=Math.max(1,Math.floor(+$("n").value||1)),v=Math.max(1,Math.floor(+$("v").value||1)),km=Math.max(0,+$("km").value||0);
+ $("porteBox").style.display=animal==="cao"?"":"none";
+ var per=null,desc="";
+ if(animal==="cao"){
+  if(n===1){per=+$("porte").value;desc="1 cão de porte "+$("porte").selectedOptions[0].text.toLowerCase()}
+  else if(n===2){per=20;desc="2 cães"}
+  else if(n===3){per=28;desc="3 cães"}
+  else desc=n+" cães";
+ }else{
+  if(n===1){per=12;desc="1 gato"}else desc=n+" gatos";
+ }
+ var out=$("out"),msg;
+ if(per===null){
+  out.innerHTML='<div class="quote">Esta combinação não tem preço fixo no site. Pede-nos um orçamento pelo WhatsApp e respondemos com o valor.</div>';
+  msg="Olá! Gostaria de pedir um orçamento para "+desc+", "+v+" visita(s), a "+km+" km de Benavente."+(($("fds").checked)?" Inclui fim de semana/feriado/época festiva.":"")+(($("noite").checked)?" Serviço a partir das 20h00.":"")+(($("med").checked)?" Precisa de medicação.":"");
+ }else{
+  var serv=per*v,fds=$("fds").checked?serv*0.5:0,noite=$("noite").checked?5*v:0,med=$("med").checked?5*v:0,desl=km*v,sup=fds+noite+med,tot=serv+sup+desl;
+  var h='<div class="row"><span>Serviços ('+v+' × '+eur(per)+')</span><b>'+eur(serv)+'</b></div>';
+  h+='<div class="row"><span>Deslocação ('+km+' km × '+v+' '+(v>1?"visitas":"visita")+')</span><b>'+eur(desl)+'</b></div>';
+  if(fds)h+='<div class="row"><span>Suplemento fim de semana/feriado (+50%)</span><b>'+eur(fds)+'</b></div>';
+  if(noite)h+='<div class="row"><span>Suplemento a partir das 20h00</span><b>'+eur(noite)+'</b></div>';
+  if(med)h+='<div class="row"><span>Suplemento de medicação</span><b>'+eur(med)+'</b></div>';
+  h+='<div class="row"><span>Suplementos aplicáveis</span><b>'+eur(sup)+'</b></div>';
+  h+='<div class="row tot"><span>Total estimado</span><b>'+eur(tot)+'</b></div>';
+  out.innerHTML=h;
+  msg="Olá! Fiz uma estimativa no site: "+desc+", "+v+" visita(s), a "+km+" km de Benavente."+(fds?" Fim de semana/feriado/época festiva.":"")+(noite?" A partir das 20h00.":"")+(med?" Com medicação.":"")+" Total estimado: "+eur(tot)+". Gostaria de combinar os detalhes.";
+ }
+ $("calcWa").href=wa(msg);$("calcWa").target="_blank";$("calcWa").rel="noopener";
+}
+["animal","porte","n","v","km","fds","noite","med"].forEach(function(id){$(id).addEventListener("input",calc);$(id).addEventListener("change",calc)});
+calc();
+$("send").onclick=function(){
+ var p=[["Nome",$("cn").value],["Animais",$("ca").value],["Localidade",$("cl").value],["Datas e horários",$("cd").value]].filter(function(x){return x[1].trim()}).map(function(x){return x[0]+": "+x[1].trim()});
+ window.open(wa("Olá! Gostaria de fazer um pedido de marcação."+(p.length?"\n"+p.join("\n"):"")),"_blank","noopener");
+};
+</script>
+</body>
+</html>
